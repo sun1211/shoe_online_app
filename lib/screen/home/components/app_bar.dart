@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_online_app/constants.dart';
+import 'package:shoe_online_app/screen/menu/menu_screen.dart';
 
 AppBar HomeAppBar(BuildContext context) {
   return AppBar(
@@ -9,10 +10,13 @@ AppBar HomeAppBar(BuildContext context) {
     leading: IconButton(
       icon: SvgPicture.asset("assets/images/burger_icon.svg"),
       onPressed: () {
-        // Navigator.push(
-        // context,
-        // MaterialPageRoute(
-        //     fullscreenDialog: true, builder: (_) => MenuPage()));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            fullscreenDialog: true,
+            builder: (_) => MenuScreen(),
+          ),
+        );
       },
     ),
     actions: [
