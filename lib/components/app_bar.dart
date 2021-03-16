@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_online_app/constants.dart';
+import 'package:shoe_online_app/screen/cart/cart_screen.dart';
 import 'package:shoe_online_app/screen/menu/menu_screen.dart';
 
 AppBar HomeAppBar(BuildContext context) {
@@ -42,8 +43,12 @@ AppBar HomeAppBar(BuildContext context) {
               BoxDecoration(color: kBlackColors, shape: BoxShape.circle),
         ),
         onPressed: () {
-          // Navigator.pushReplacement(
-          //     context, MaterialPageRoute(builder: (_) => CartPage()));
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (_) => CardScreen(),
+            ),
+          );
         },
       ),
     ],
